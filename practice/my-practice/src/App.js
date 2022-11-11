@@ -1,4 +1,5 @@
 import Hooks from './components/Hooks';
+import Forms from './components/Forms';
 import './App.css';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
         desc = { "Full size keyboard, backlit, with numpad for all your work essential needs!" }
         cost = { 36.99 }
         currentStock = { 22 } />
+
+      <Forms />
 
     </div>
   );
