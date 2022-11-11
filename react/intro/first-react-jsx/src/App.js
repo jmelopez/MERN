@@ -12,6 +12,7 @@ function App() {
         <li>Pack bag for upcoming trip</li>
         <li>Play game!</li>
       </ul>
+
     </div>
   );
 }
