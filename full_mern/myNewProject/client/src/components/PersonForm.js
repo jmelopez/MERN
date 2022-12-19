@@ -8,7 +8,7 @@ const PersonForm = (props) => {
 
     const onSubmitHandler = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8000/api/people', {
+        axios.post('http://localhost:8000/api/people/', {
             firstName,
             lastName
         })
