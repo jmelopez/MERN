@@ -31,3 +31,19 @@ module.exports.getProduct = (req, res) => {
         .catch(err => res.json(err))
 }
 
+//update product
+module.exports.updateProduct = (req,res) => {
+    Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {new: true})
+        .then(updatedProduct => res.json(updatedProduct))
+        .catch(err => res.json(err))
+}
+
+//delete product
+module.exports.deleteProduct = (req, res) => {
+    Product.findByIdAndDelete(req.params.id)
+        .then(deleteConfirm => res.json(deleteConfirm))
+        .catch(err => res.json(err))
+}
