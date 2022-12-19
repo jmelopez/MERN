@@ -1,10 +1,21 @@
 
 import './App.css';
-import ProductForm from './components/ProductForm';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import axios from 'axios';
+import Main from './views/Main'
+import { useState } from 'react';
+import Detail from './components/Detail';
 
 function App() {
   return (
-    <ProductForm/>
+    <div className='App'>
+    <BrowserRouter>
+      <Routes>
+        <Route element = { <Main/> } path='/product/' default />
+        <Route element= { <Detail/> } path='/product/:id' />
+      </Routes>
+    </BrowserRouter>
+    </div>
   );
 }
 
